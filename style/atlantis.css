@@ -86,6 +86,9 @@ p {
 .tile.tile-2048 .tile-inner {
   background: transparent url('../img/vatten.png');
 }
+.tile.tile-super .tile-inner {
+  background: transparent url('../img/atlantis.png');
+}
 
 .atlantis-map img {
   width: 800px;
