@@ -1,0 +1,46 @@
+/**
+
+ * ljus orange
+ * rgb(237, 167, 41);
+
+ * orange
+ * rgb(241, 93, 5);
+
+ * turkos
+ * rgb(8, 175, 193);
+
+ * ljus turkos
+ * rgb(133, 225, 224);
+
+ */
+
+html {
+  background: none repeat scroll 0 0 rgb(133, 225, 224);
+  color: #fff;
+}
+body {
+  background-color: #fff;
+  color: rgb(8, 175, 193);
+}
+p {
+  color: #777;
+}
+.container {
+  height: 750px;
+}
+.pause-container {
+  background-color: rgb(241, 93, 5);
+}
+.score-container,
+.best-container {
+  background-color: rgb(237, 167, 41);
+}
+.next-tile-container {
+  background-color: rgb(133, 225, 224);
+}
+.game-container {
+  background-color: rgb(8, 175, 193);
+}
+.invi {
+  background-color: rgb(133, 225, 224);
+}
