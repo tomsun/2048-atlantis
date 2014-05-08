@@ -94,3 +94,11 @@ p {
   width: 800px;
   margin-left: -150px;
 }
+
+img.preload {
+  position:absolute;
+  bottom: 0px;
+  right: 0px;
+  width: 1px;
+  height: 1px;
+}
