@@ -102,3 +102,7 @@ img.preload {
   width: 1px;
   height: 1px;
 }
+
+.game-container .game-message p a {
+  background: transparent;
+}
