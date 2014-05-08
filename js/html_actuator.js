@@ -149,7 +149,7 @@ HTMLActuator.prototype.message = function (won) {
   }
 
   this.messageContainer.classList.add(type);
-  this.messageContainer.getElementsByTagName("p")[0].textContent = message;
+  this.messageContainer.getElementsByTagName("p")[0].innerHTML = message;
 
   this.clearContainer(this.sharingContainer);
 };
