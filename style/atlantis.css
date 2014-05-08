@@ -105,6 +105,7 @@ img.preload {
 
 .game-container .game-message p a {
   background: transparent;
+  text-shadow: 0px 0px 5px #000;
 }
 
 .game-container .game-message .lower {
