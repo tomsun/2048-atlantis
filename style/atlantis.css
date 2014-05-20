@@ -19,7 +19,7 @@ html {
   color: #fff;
 }
 body {
-  background-color: #fff;
+  background: #fff url('../img/map.png') no-repeat;
   color: rgb(8, 175, 193);
 }
 p {
@@ -88,11 +88,6 @@ p {
 }
 .tile.tile-super .tile-inner {
   background: transparent url('../img/atlantis.png');
-}
-
-.atlantis-map img {
-  width: 800px;
-  margin-left: -150px;
 }
 
 img.preload {
