@@ -49,6 +49,7 @@
       <div class="game-message">
         <p></p>
         <div class="lower">
+          <a class="fb-button" onclick="fb_share()">Dela till Facebook</a>
           <a class="keep-playing-button">Fortsätt spela</a>
           <a class="retry-button">Försök igen</a>
           <div class="score-sharing"></div>
@@ -162,6 +163,13 @@
   js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=231242543737402&version=v2.0";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
+
+  function fb_share() {
+    FB.ui({
+      method: 'share',
+      href: window.location
+    }, function(response){});
+  }
 </script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

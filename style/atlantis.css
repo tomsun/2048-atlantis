@@ -133,3 +133,7 @@ img.preload {
   top: 10px;
   left: 10px;
 }
+
+.fb-button {
+  background-color: #354C8C !important;
+}
