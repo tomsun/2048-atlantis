@@ -57,10 +57,10 @@ p {
   background: transparent url('../img/tavling.png');
 }
 .tile.tile-4 .tile-inner {
-  background: transparent url('../img/skapa.png');
+  background: transparent url('../img/metis.png');
 }
 .tile.tile-8 .tile-inner {
-  background: transparent url('../img/metis.png');
+  background: transparent url('../img/skapa.png');
 }
 .tile.tile-16 .tile-inner {
   background: transparent url('../img/asteria.png');
