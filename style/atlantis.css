@@ -106,3 +106,24 @@ img.preload {
 .game-container .game-message .lower {
   margin-top: 100px;
 }
+
+.score-container:after {
+  content: "Poäng";
+}
+
+.best-container:after {
+  content: "Bästa";
+}
+
+.next-tile-container:after {
+  color: #776E65;
+  content: "Nästa";
+}
+
+.pause-container:after {
+  content: "PAUSA";
+}
+
+.pause-container.paused:after {
+  content: "SPELA";
+}
