@@ -69,19 +69,19 @@ p {
   background: transparent url('../img/lelantos.png');
 }
 .tile.tile-64 .tile-inner {
-  background: transparent url('../img/action.png');
+  background: transparent url('../img/oceanis.png');
 }
 .tile.tile-128 .tile-inner {
   background: transparent url('../img/hyperion.png');
 }
 .tile.tile-256 .tile-inner {
-  background: transparent url('../img/oceanis.png');
-}
-.tile.tile-512 .tile-inner {
   background: transparent url('../img/science.png');
 }
-.tile.tile-1024 .tile-inner {
+.tile.tile-512 .tile-inner {
   background: transparent url('../img/globalt.png');
+}
+.tile.tile-1024 .tile-inner {
+  background: transparent url('../img/action.png');
 }
 .tile.tile-2048 .tile-inner {
   background: transparent url('../img/vatten.png');
