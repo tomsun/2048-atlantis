@@ -127,3 +127,9 @@ img.preload {
 .pause-container.paused:after {
   content: "SPELA";
 }
+
+#fb-share-header {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
