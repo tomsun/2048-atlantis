@@ -155,11 +155,16 @@ img.preload {
   background-color: #354C8C !important;
 }
 
+.atlantis-map img {
+  max-width: 100%;
+}
+
 .heading {
   height: 67px;
 }
 .heading .logo {
   width: 170px;
-  height: 24px;
+  height: auto;
+  max-width: 40%;
   margin-top: 10px;
 }
