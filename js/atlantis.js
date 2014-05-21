@@ -43,6 +43,7 @@ function atlantis_share_place(largestTile) {
 }
 
 function atlantis_bonus_round() {
+  ga("send", "event", "atlantis", "bonus-started", "bonus-started");
   game.atlantis_b = true;
   window.FACTOR = 0.65;
   document.getElementsByTagName("head")[0].innerHTML += '<link href="style/bonus.css" rel="stylesheet" type="text/css">';
@@ -50,8 +51,10 @@ function atlantis_bonus_round() {
 }
 function atlantis_bonus_finish(won) {
   if (won) {
+    ga("send", "event", "atlantis", "bonus-won", "bonus-won");
     alert("Du klarade bonusrundan, snyggt!")
   } else {
+    ga("send", "event", "atlantis", "bonus-lost", "bonus-lost");
     alert("Game Over - du kom inte hela vägen")
   }
   window.location = window.location.href + "?1";
