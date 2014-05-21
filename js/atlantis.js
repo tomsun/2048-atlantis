@@ -1,5 +1,5 @@
 // Make sure this matches the CSS definition
-var atlantis_img_base = "http://tomsun.github.io/2048-atlantis/img";
+var atlantis_img_base = "http://atlantis2014.fi/game/img";
 var atlantis_places = {};
 atlantis_places[2] = {"title": "Tävlingsdalen", "img": atlantis_img_base + "/tavling.png"};
 atlantis_places[4] = {"title": "Metis", "img": atlantis_img_base + "/metis.png"};
