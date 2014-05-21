@@ -35,6 +35,9 @@ function atlantis_share_place(largestTile) {
       caption: caption,
       description: 'Spela 2048-Atlantis och försök hitta fram mellan öar och genom dalar.'
     }, function(response) {
+      if (typeof ga !== "undefined") {
+        ga("send", "event", "atlantis", "fb-share-place", "fb-share-place", largestTile);
+      }
       console.log(response)
   });
 }
