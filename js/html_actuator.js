@@ -147,9 +147,18 @@ HTMLActuator.prototype.message = function (won) {
 
   var message = '';
   if (won) {
-    message = 'Du kom ända fram!';
+    message = '<img class="atlantis-place" src="' +  atlantis_img_base + '/atlantis.png" alt="Atlantis" title="Atlantis" />';
+    message += '<br />Du kom ända fram!';
   } else {
-    message = 'Nästan...';
+    var largestTile = game.largestTile();
+    if (largestTile > 4096) largestTile = 4096;
+    if (typeof atlantis_places[largestTile] !== "undefined") {
+      var place = atlantis_places[largestTile];
+      message = '<img class="atlantis-place" src="' + place['img'] + '" alt="' + place['title'] + '" title="' + place['title'] + '" />';
+      message += '<br />Nästan... Du kom till ' + place['title'];
+    } else {
+      message = 'Nästan...';
+    }
   }
   message += ' <a href="http://atlantis2014.fi" target="_blank">#visespåatlantis</a>';
 
