@@ -132,8 +132,10 @@ HTMLActuator.prototype.updateScore = function (score) {
 HTMLActuator.prototype.updateNextTile = function (nextTile) {
     this.clearContainer(this.nextTileContainer);
     this.nextTileContainer.textContent = nextTile;
-    this.nextTileContainer.style.background = this.next_background[nextTile];
-    this.nextTileContainer.style.color = this.next_color[nextTile];
+    this.nextTileContainer.classList.remove("next-tile-2");
+    this.nextTileContainer.classList.remove("next-tile-4");
+    this.nextTileContainer.classList.remove("next-tile-8");
+    this.nextTileContainer.classList.add("next-tile-" + nextTile);
 };
 
 HTMLActuator.prototype.updateBestScore = function (bestScore) {

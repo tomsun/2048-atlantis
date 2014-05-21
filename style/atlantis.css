@@ -53,13 +53,22 @@ p {
   background-size: cover !important;
   box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0); 
 }
-.tile.tile-2 .tile-inner {
+.next-tile-container {
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  color: transparent !important;
+}
+.tile.tile-2 .tile-inner,
+.next-tile-2 {
   background: transparent url('../img/tavling.png');
 }
-.tile.tile-4 .tile-inner {
+.tile.tile-4 .tile-inner,
+.next-tile-4 {
   background: transparent url('../img/metis.png');
 }
-.tile.tile-8 .tile-inner {
+.tile.tile-8 .tile-inner,
+.next-tile-8 {
   background: transparent url('../img/skapa.png');
 }
 .tile.tile-16 .tile-inner {
@@ -116,8 +125,7 @@ img.preload {
 }
 
 .next-tile-container:after {
-  color: #776E65;
-  content: "Nästa";
+  content: "";
 }
 
 .pause-container:after {
