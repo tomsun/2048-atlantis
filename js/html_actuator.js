@@ -155,14 +155,14 @@ HTMLActuator.prototype.message = function (won) {
   var message = '';
   var largestTile = 0;
   if (won) {
-    message = '<img class="atlantis-place" src="' +  atlantis_img_base + '/atlantis.png" alt="Atlantis" title="Atlantis" />';
+    message = '<img class="atlantis-place" src="./img/atlantis.png" alt="Atlantis" title="Atlantis" />';
     message += '<br />Du kom ända fram!';
   } else {
     largestTile = game.largestTile();
     if (largestTile > 4096) largestTile = 4096;
     if (typeof atlantis_places[largestTile] !== "undefined") {
       var place = atlantis_places[largestTile];
-      message = '<img class="atlantis-place" src="' + place['img'] + '" alt="' + place['title'] + '" title="' + place['title'] + '" />';
+      message = '<img class="atlantis-place" src="./img/' + place['img'] + '" alt="' + place['title'] + '" title="' + place['title'] + '" />';
       message += '<br />Nästan... Du kom till ' + place['title'];
     } else {
       message = 'Nästan...';
