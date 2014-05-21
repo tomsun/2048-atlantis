@@ -146,11 +146,12 @@ HTMLActuator.prototype.message = function (won) {
   var type    = won ? "game-won" : "game-over";
 
   var message = '';
+  var largestTile = 0;
   if (won) {
     message = '<img class="atlantis-place" src="' +  atlantis_img_base + '/atlantis.png" alt="Atlantis" title="Atlantis" />';
     message += '<br />Du kom ända fram!';
   } else {
-    var largestTile = game.largestTile();
+    largestTile = game.largestTile();
     if (largestTile > 4096) largestTile = 4096;
     if (typeof atlantis_places[largestTile] !== "undefined") {
       var place = atlantis_places[largestTile];
@@ -164,6 +165,9 @@ HTMLActuator.prototype.message = function (won) {
 
   if (typeof ga !== "undefined") {
     ga("send", "event", "game", "end", type, this.score);
+    if (largestTile) {
+      ga("send", "event", "atlantis", "place", "place", largestTile);
+    }
   }
 
   this.messageContainer.classList.add(type);
