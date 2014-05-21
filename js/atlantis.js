@@ -16,14 +16,23 @@ atlantis_places[4096] = {"title": "Atlantis", "img": atlantis_img_base + "/atlan
 
 function atlantis_share_place(largestTile) {
   if (largestTile > 4096) largestTile = 4096;
-  var place = atlantis_places[largestTile];
+
+  var name = 'Ses vi på Atlantis?';
+  var caption = 'Hittar du ända fram?';
+  var img = atlantis_img_base + '/map.jpg';
+  if (typeof atlantis_places[largestTile] !== "undefined") {
+    var place = atlantis_places[largestTile];
+    name = 'Jag kom ända till ' + place['title'] + '!';
+    caption = 'Hur långt kommer du i Atlantisspelet?';
+    img = place['img'];
+  }
 
   FB.ui({
       method: 'feed',
-      name: 'Jag kom ända till ' + place['title'] + '!',
+      name: name,
       link: 'http://atlantis2014.fi/game/',
-      picture: place['img'],
-      caption: 'Hur långt kommer du i Atlantisspelet?',
+      picture: img,
+      caption: caption,
       description: 'Spela 2048-Atlantis och försök hitta fram mellan öar och genom dalar.'
     }, function(response) {
       console.log(response)
