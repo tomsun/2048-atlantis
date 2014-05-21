@@ -154,3 +154,12 @@ img.preload {
 .fb-button {
   background-color: #354C8C !important;
 }
+
+.heading {
+  height: 67px;
+}
+.heading .logo {
+  width: 170px;
+  height: 24px;
+  margin-top: 10px;
+}
