@@ -68,6 +68,9 @@ HTMLActuator.prototype.addTile = function (tile) {
 
   if (tile.value > 2048) classes.push("tile-super");
 
+  if (typeof tile.sclass === "undefined") tile.sclass = Math.floor(Math.random()*8);
+  classes.push("tile-s" + tile.sclass);
+
   this.applyClasses(wrapper, classes);
 
   inner.classList.add("tile-inner");
@@ -145,6 +148,10 @@ HTMLActuator.prototype.updateBestScore = function (bestScore) {
 HTMLActuator.prototype.message = function (won) {
   var type    = won ? "game-won" : "game-over";
 
+  if (typeof game.atlantis_b !== "undefined" && game.atlantis_b) {
+    return atlantis_bonus_finish(won);
+  }
+
   var message = '';
   var largestTile = 0;
   if (won) {
@@ -162,6 +169,10 @@ HTMLActuator.prototype.message = function (won) {
     }
   }
   message += ' <a href="http://atlantis2014.fi" target="_blank">#visespåatlantis</a>';
+
+  if (largestTile >= 512) {
+    message += '<br /><a style="font-size: 20px; " onclick="atlantis_bonus_round()">starta bonus-runda</a>';
+  }
 
   if (typeof ga !== "undefined") {
     ga("send", "event", "game", "end", type, this.score);

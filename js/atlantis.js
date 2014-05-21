@@ -42,6 +42,21 @@ function atlantis_share_place(largestTile) {
   });
 }
 
+function atlantis_bonus_round() {
+  game.atlantis_b = true;
+  window.FACTOR = 0.65;
+  document.getElementsByTagName("head")[0].innerHTML += '<link href="style/bonus.css" rel="stylesheet" type="text/css">';
+  game.restart();
+}
+function atlantis_bonus_finish(won) {
+  if (won) {
+    alert("Du klarade bonusrundan, snyggt!")
+  } else {
+    alert("Game Over - du kom inte hela vägen")
+  }
+  window.location = window.location.href + "?1";
+}
+
 function atlantis_init() {
   var imgs_preload = new Array(
     'action.png',

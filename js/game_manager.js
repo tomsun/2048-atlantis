@@ -167,6 +167,7 @@ GameManager.prototype.move = function (direction) {
 
           // The mighty Atlantis (4096) tile
           if (merged.value === 4096) self.won = true;
+          if (game.atlantis_b && merged.value === 32) self.won = true;
         } else {
           self.moveTile(tile, positions.farthest);
         }

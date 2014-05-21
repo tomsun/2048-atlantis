@@ -1,0 +1,72 @@
+.game-container {
+  background-color: rgb(241, 93, 5);
+}
+.invi {
+  background-color: rgb(237, 167, 41);
+}
+
+.tile.tile-2 .tile-inner {
+  background: transparent url('../img/s2a.png');
+}
+.tile.tile-2.tile-s2 .tile-inner,
+.tile.tile-2.tile-s3 .tile-inner,
+.tile.tile-2.tile-s4 .tile-inner {
+  background: transparent url('../img/s2b.png');
+}
+.tile.tile-2.tile-s5 .tile-inner,
+.tile.tile-2.tile-s6 .tile-inner,
+.tile.tile-2.tile-s7 .tile-inner {
+  background: transparent url('../img/s2c.png');
+}
+
+.tile.tile-4 .tile-inner {
+  background: transparent url('../img/s4a.png');
+}
+.tile.tile-4.tile-s2 .tile-inner,
+.tile.tile-4.tile-s3 .tile-inner {
+  background: transparent url('../img/s4b.png');
+}
+.tile.tile-4.tile-s4 .tile-inner,
+.tile.tile-4.tile-s5 .tile-inner {
+  background: transparent url('../img/s4c.png');
+}
+.tile.tile-4.tile-s6 .tile-inner,
+.tile.tile-4.tile-s7 .tile-inner {
+  background: transparent url('../img/s4d.png');
+}
+
+.tile.tile-8 .tile-inner {
+  background: transparent url('../img/s8a.png');
+}
+.tile.tile-8.tile-s2 .tile-inner,
+.tile.tile-8.tile-s3 .tile-inner {
+  background: transparent url('../img/s8b.png');
+}
+.tile.tile-8.tile-s4 .tile-inner,
+.tile.tile-8.tile-s5 .tile-inner {
+  background: transparent url('../img/s8c.png');
+}
+.tile.tile-8.tile-s6 .tile-inner,
+.tile.tile-8.tile-s7 .tile-inner {
+  background: transparent url('../img/s8d.png');
+}
+
+.tile.tile-16 .tile-inner {
+  background: transparent url('../img/s16.png');
+}
+.tile.tile-32 .tile-inner {
+  background: transparent url('../img/s32.png');
+}
+.next-tile-container {
+  display:none;
+}
+.levels-container {
+  display:none;
+}
+.scores-container {
+  display:none;
+}
+
+body {
+  background: #fff url('../img/smap.jpg') no-repeat;
+}
