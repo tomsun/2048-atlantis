@@ -299,3 +299,18 @@ GameManager.prototype.tileMatchesAvailable = function () {
 GameManager.prototype.positionsEqual = function (first, second) {
   return first.x === second.x && first.y === second.y;
 };
+
+// Find the largest tile currently on the grid
+GameManager.prototype.largestTile = function () {
+  var tile;
+  var largest = 0;
+  for (var x = 0; x < this.size; x++) {
+    for (var y = 0+1; y < this.size+1; y++) {
+      tile = this.grid.cellContent({ x: x, y: y });
+      if (tile) {
+        if (tile.value > largest) largest = tile.value;
+      }
+    }
+  }
+  return largest;
+};
