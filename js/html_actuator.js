@@ -144,7 +144,14 @@ HTMLActuator.prototype.updateBestScore = function (bestScore) {
 
 HTMLActuator.prototype.message = function (won) {
   var type    = won ? "game-won" : "game-over";
-  var message = won ? 'Du kom ända fram! <a href="http://atlantis2014.fi" target="_blank">#visespåatlantis</a>' : 'Nästan... <a href="http://atlantis2014.fi" target="_blank">#visespåatlantis</a>';
+
+  var message = '';
+  if (won) {
+    message = 'Du kom ända fram!';
+  } else {
+    message = 'Nästan...';
+  }
+  message += ' <a href="http://atlantis2014.fi" target="_blank">#visespåatlantis</a>';
 
   if (typeof ga !== "undefined") {
     ga("send", "event", "game", "end", type, this.score);
