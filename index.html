@@ -172,10 +172,7 @@
 }(document, 'script', 'facebook-jssdk'));
 
   function fb_share() {
-    FB.ui({
-      method: 'share',
-      href: window.location.href
-    }, function(response){});
+    atlantis_share_place(game.largestTile());
   }
 </script>
 <script>
